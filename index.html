@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Improve School — образование под вашу цель | Бишкек</title>
+<meta property="og:title" content="Improve School — образование под вашу цель">
+<meta property="og:description" content="Поступление в зарубежные университеты, языки, магистратура и MBA, soft skills и обучение для компаний. Бишкек. Бесплатная консультация.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://improve.kg/">
+<meta property="og:image" content="https://improve.kg/og-image.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<meta name="description" content="Improve School, Бишкек: поступление в зарубежные университеты, иностранные языки, магистратура и MBA, soft skills и обучение для компаний. Бесплатная консультация.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: sticky header with the 5 directions always one tap away; stair motif from the logo carries the student path. */
+:root{
+  --ivory:#F7F4EC; --paper:#FFFFFF; --ink:#2A1A1F; --muted:#64545A;
+  --wine:#5E1A2B; --wine-deep:#47121F; --gold:#C5A572; --gold-ink:#8A6A36;
+  --line:#E7DFD0; --wine-tint:#F1E7E3;
+  --display:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --body:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+a{color:var(--wine)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--wine);letter-spacing:-0.01em}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.15;font-weight:600}
+h3{font-size:clamp(20px,2.2vw,24px);line-height:1.25;font-weight:600}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.eyebrow{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink)}
+.lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:62ch}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font-family:var(--display);font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn-primary{background:var(--wine);color:#fff}
+.btn-primary:hover{background:var(--wine-deep)}
+.btn-ghost{border-color:var(--wine);color:var(--wine);background:transparent}
+.btn-ghost:hover{background:var(--wine);color:#fff}
+.btn-gold{background:var(--gold);color:var(--wine-deep)}
+.btn-gold:hover{background:#D4B886}
+.btn svg{flex:none}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Header */
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--paper);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.brand{display:block;line-height:0}
+.brand svg{height:44px;width:auto}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;padding:10px 10px;border-radius:8px;white-space:nowrap}
+.nav a:hover{background:var(--wine-tint);color:var(--wine)}
+.nav .btn{margin-left:10px;min-height:44px;padding:0 20px;font-size:14px;color:#fff}
+.nav .btn:hover{background:var(--wine-deep);color:#fff}
+.menu-btn{display:none;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1.5px solid var(--wine);border-radius:999px;background:none;color:var(--wine);font-family:var(--display);font-weight:600;font-size:14px;cursor:pointer}
+.mobile-menu{border-top:1px solid var(--line);background:var(--paper);padding-block:12px 20px}
+.mobile-menu .group-label{font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);font-weight:600;padding:12px 4px 4px}
+.mobile-menu a{display:flex;justify-content:space-between;align-items:center;padding:13px 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600}
+.mobile-menu a span{font-weight:400;color:var(--muted);font-size:14px}
+.mobile-menu .btn{margin-top:16px;width:100%;border-bottom:0;color:#fff;justify-content:center}
+@media (max-width:980px){.nav{display:none}.menu-btn{display:inline-flex}.brand svg{height:38px}}
+
+
+/* Hero */
+.hero{padding-block:clamp(48px,8vw,96px) clamp(48px,7vw,88px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(36px,5.6vw,64px);line-height:1.05;font-weight:600;margin:16px 0 20px}
+.hero .lead{margin-bottom:12px}
+.hero .who{color:var(--ink);font-weight:600;margin-bottom:28px}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* Stair path */
+.path{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;min-width:0}
+.path h2{font-size:20px;margin-bottom:6px;text-align:center}
+.path .sub{color:var(--muted);font-size:15px;margin-bottom:20px;text-align:center}
+.stairs{list-style:none;margin:0;padding:34px 0 0;display:flex;flex-direction:column-reverse;gap:0}
+.stairs li{display:flex;align-items:center;min-height:46px}
+.stairs .label{order:-1;flex:1;min-width:0;text-align:right;padding-right:14px;font-size:14px;line-height:1.25;font-weight:600;color:var(--ink)}
+.stairs .step{position:relative;flex:none;align-self:stretch;width:calc(80% - var(--i) * 11%);display:flex;align-items:center;padding-left:12px;background:var(--wine);color:var(--gold);font-family:var(--display);font-size:14px;font-weight:600}
+.stairs li:last-child .step::before{content:"";position:absolute;left:50%;top:-32px;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:var(--gold)}
+
+/* Sections */
+section{padding-block:clamp(56px,8vw,104px)}
+.section-head{display:flex;flex-direction:column;gap:12px;margin-bottom:clamp(28px,4vw,48px);max-width:760px}
+.alt{background:var(--paper);border-block:1px solid var(--line)}
+
+/* Directions grid */
+.dirs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px}
+.dir{display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:20px;background:var(--paper);border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.dir:hover{border-color:var(--gold);transform:translateY(-2px)}
+.dir .num{font-family:var(--display);font-size:13px;font-weight:600;color:var(--gold-ink)}
+.dir h3{font-size:19px}
+.dir .for{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.dir p{font-size:15px;color:var(--muted);flex:1}
+.dir .more{font-family:var(--display);font-size:14px;font-weight:600;color:var(--wine)}
+
+/* About + trust */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+.about .text{display:flex;flex-direction:column;gap:16px;color:var(--ink)}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px;align-content:start}
+.trust div{display:flex;flex-direction:column;gap:6px;padding-top:18px;border-top:2px solid var(--gold)}
+.trust strong{font-family:var(--display);color:var(--wine);font-size:17px}
+.trust span{color:var(--muted);font-size:15px}
+.parents{margin-top:clamp(40px,5vw,64px);background:var(--wine);color:#F7F4EC;border-radius:24px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:auto 1fr;gap:24px 40px;align-items:start}
+.parents h3{color:#fff}
+.parents .eyebrow{color:var(--gold)}
+.parents p{color:#E9DDD9;max-width:62ch}
+@media (max-width:860px){.about,.parents{grid-template-columns:1fr}.trust{grid-template-columns:1fr}}
+
+/* Direction sections */
+.dhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:clamp(28px,4vw,44px)}
+.dhead > div{display:flex;flex-direction:column;gap:12px;max-width:720px}
+.tag{display:inline-block;font-size:13px;font-weight:600;color:var(--wine);background:var(--wine-tint);padding:6px 12px;border-radius:999px}
+
+.unis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px}
+.uni{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.uni .country{font-size:13px;font-weight:700;color:var(--gold-ink);text-transform:uppercase;letter-spacing:.08em}
+.uni h3{font-size:21px}
+.uni p{font-size:15px;color:var(--muted)}
+.uni ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px}
+.uni li{padding-left:18px;position:relative}
+.uni li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;background:var(--gold);border-radius:1px}
+.uni li b{color:var(--wine)}
+
+.china{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px}
+.china-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:6px}
+.china > p{color:var(--muted);font-size:15px;margin-bottom:12px}
+.china ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));column-gap:40px}
+.china li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.china li span:first-child{font-weight:600;min-width:0}
+.china li span:last-child{flex:none;color:var(--gold-ink);font-weight:600;text-align:right}
+.china small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+
+.extra{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.extra div{border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.extra p{font-size:15px;color:var(--muted)}
+@media (max-width:760px){.extra{grid-template-columns:1fr}}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);margin-top:clamp(40px,5vw,64px)}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.checks{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks svg{flex:none;margin-top:4px}
+.steps{background:var(--wine);color:#F7F4EC;border-radius:24px;padding:clamp(24px,4vw,36px)}
+.steps h3{color:#fff}
+.steps ol{list-style:none;margin:20px 0 28px;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+.steps li{display:flex;gap:14px;align-items:center;counter-increment:s}
+.steps li::before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:14px}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+.alt .card{background:var(--ivory)}
+.card .side{display:flex;flex-direction:column;gap:16px}
+.card .side p{color:var(--muted)}
+@media (max-width:860px){.card{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1.5px solid var(--wine);color:var(--wine);border-radius:999px;padding:7px 14px;font-weight:600;font-size:14px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;font-weight:600}
+.flow span{background:var(--wine-tint);color:var(--wine);padding:7px 12px;border-radius:8px}
+.flow i{font-style:normal;color:var(--gold-ink)}
+
+/* FAQ */
+.faq{max-width:860px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-family:var(--display);font-weight:600;font-size:17px;color:var(--wine);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2px solid var(--gold-ink);border-bottom:2px solid var(--gold-ink);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{padding:0 0 22px;color:var(--muted);max-width:68ch}
+
+/* Contacts */
+.contacts{background:var(--wine);color:#F7F4EC}
+.contacts h2{color:#fff}
+.contacts .lead{color:#E9DDD9}
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.clist{display:flex;flex-direction:column;gap:22px}
+.citem{display:flex;gap:16px;align-items:flex-start}
+.citem .ic{flex:none;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center}
+.citem .label{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.citem .value{font-size:18px;font-weight:600;color:#fff;user-select:all}
+.citem a.value{text-decoration:none}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:var(--wine-deep);color:#CDBDB8;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-block:28px}
+footer svg{height:34px;width:auto}
+
+/* Floating WhatsApp on phones */
+.wa-float{display:none;position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wine);color:#fff;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(71,18,31,.35)}
+@media (max-width:760px){.wa-float{display:flex}}
+</style>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Improve School, на главную"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 874.04 277.58" aria-hidden="true" focusable="false">
+
+<path fill="#5E1A2B" d="M31.62 189.72L31.62 157.51L66.75 157.51L66.75 125.31L101.89 125.31L101.89 84.32L137.02 84.32L137.02 189.72Z"/>
+<path fill="#C5A572" d="M137.02 49.19C137.02 39.48 129.16 31.62 119.45 31.62C109.75 31.62 101.89 39.48 101.89 49.19C101.89 58.89 109.75 66.75 119.45 66.75C129.16 66.75 137.02 58.89 137.02 49.19Z"/>
+<path fill="#5E1A2B" d="M155.42 189.72L155.42 84.32L170.42 84.32L170.42 112.72L168.02 107.12Q172.82 95.92 183.42 89.62Q194.02 83.32 208.42 83.32Q223.62 83.32 234.52 91.02Q245.42 98.72 248.62 113.92L242.42 111.52Q247.02 98.92 258.82 91.12Q270.62 83.32 287.02 83.32Q299.82 83.32 309.42 88.32Q319.02 93.32 324.32 103.32Q329.62 113.32 329.62 128.72L329.62 189.72L314.02 189.72L314.02 130.32Q314.02 114.12 306.32 105.82Q298.62 97.52 284.62 97.52Q274.22 97.52 266.52 101.92Q258.82 106.32 254.62 114.52Q250.42 122.72 250.42 134.72L250.42 189.72L234.62 189.72L234.62 130.32Q234.62 114.12 226.92 105.82Q219.22 97.52 205.22 97.52Q195.02 97.52 187.22 101.92Q179.42 106.32 175.22 114.52Q171.02 122.72 171.02 134.72L171.02 189.72ZM408.22 190.72Q394.62 190.72 383.62 184.52Q372.62 178.32 366.12 166.32Q359.62 154.32 359.62 137.12Q359.62 119.52 366.02 107.62Q372.42 95.72 383.42 89.52Q394.42 83.32 408.22 83.32Q423.42 83.32 435.32 90.12Q447.22 96.92 454.12 109.02Q461.02 121.12 461.02 137.12Q461.02 153.12 454.12 165.12Q447.22 177.12 435.32 183.92Q423.42 190.72 408.22 190.72ZM353.42 228.52L353.42 84.32L368.42 84.32L368.42 115.12L367.02 137.32L369.02 159.52L369.02 228.52ZM407.02 176.92Q417.82 176.92 426.42 172.02Q435.02 167.12 440.02 158.02Q445.02 148.92 445.02 137.12Q445.02 125.12 440.02 116.12Q435.02 107.12 426.42 102.12Q417.82 97.12 407.02 97.12Q396.02 97.12 387.42 102.12Q378.82 107.12 373.82 116.12Q368.82 125.12 368.82 137.12Q368.82 148.92 373.82 158.02Q378.82 167.12 387.42 172.02Q396.02 176.92 407.02 176.92ZM475.22 189.72L475.22 84.32L490.22 84.32L490.22 113.12L488.62 107.52Q493.22 95.72 503.52 89.52Q513.82 83.32 529.22 83.32L529.22 98.72Q528.22 98.52 527.42 98.52Q526.62 98.52 525.62 98.52Q509.42 98.52 500.12 108.32Q490.82 118.12 490.82 136.32L490.82 189.72ZM585.62 190.72Q570.02 190.72 557.82 183.82Q545.62 176.92 538.62 164.72Q531.62 152.52 531.62 136.92Q531.62 121.12 538.72 109.12Q545.82 97.12 557.92 90.22Q570.02 83.32 585.62 83.32Q601.22 83.32 613.42 90.22Q625.62 97.12 632.62 109.12Q639.62 121.12 639.62 136.92Q639.62 152.52 632.62 164.72Q625.62 176.92 613.32 183.82Q601.02 190.72 585.62 190.72ZM585.62 176.92Q596.62 176.92 605.22 171.92Q613.82 166.92 618.72 157.92Q623.62 148.92 623.62 136.92Q623.62 124.92 618.72 116.02Q613.82 107.12 605.22 102.12Q596.62 97.12 585.62 97.12Q574.62 97.12 566.12 102.12Q557.62 107.12 552.52 116.02Q547.42 124.92 547.42 136.92Q547.42 148.92 552.52 157.92Q557.62 166.92 566.12 171.92Q574.62 176.92 585.62 176.92ZM681.22 189.72L634.62 84.32L651.02 84.32L693.42 181.32L685.62 181.32L728.42 84.32L744.02 84.32L697.22 189.72ZM794.82 190.72Q778.22 190.72 765.62 183.82Q753.02 176.92 746.02 164.72Q739.02 152.52 739.02 136.92Q739.02 121.32 745.72 109.22Q752.42 97.12 764.22 90.22Q776.02 83.32 791.02 83.32Q805.82 83.32 817.42 90.12Q829.02 96.92 835.72 109.02Q842.42 121.12 842.42 137.12Q842.42 138.12 842.32 139.42Q842.22 140.72 842.02 141.92L751.02 141.92L751.02 130.32L833.82 130.32L827.42 134.72Q827.62 123.72 822.82 115.12Q818.02 106.52 809.82 101.62Q801.62 96.72 791.02 96.72Q780.22 96.72 771.92 101.62Q763.62 106.52 759.02 115.22Q754.42 123.92 754.42 135.12L754.42 137.72Q754.42 149.32 759.52 158.12Q764.62 166.92 773.92 171.92Q783.22 176.92 795.22 176.92Q804.82 176.92 812.92 173.52Q821.02 170.12 826.82 163.32L835.62 173.52Q828.62 181.92 818.12 186.32Q807.62 190.72 794.82 190.72Z"/>
+<path fill="#A07E48" d="M644.39 245.96Q641.99 245.96 639.8 245.23Q637.61 244.49 636.35 243.32L637.46 240.98Q638.66 242.03 640.52 242.72Q642.38 243.41 644.39 243.41Q646.22 243.41 647.36 242.99Q648.5 242.57 649.04 241.84Q649.58 241.1 649.58 240.17Q649.58 239.09 648.88 238.43Q648.17 237.77 647.04 237.37Q645.92 236.96 644.57 236.66Q643.22 236.36 641.86 235.96Q640.49 235.55 639.37 234.92Q638.24 234.29 637.55 233.23Q636.86 232.16 636.86 230.48Q636.86 228.86 637.72 227.5Q638.57 226.13 640.36 225.31Q642.14 224.48 644.9 224.48Q646.73 224.48 648.53 224.96Q650.33 225.44 651.65 226.34L650.66 228.74Q649.31 227.84 647.81 227.44Q646.31 227.03 644.9 227.03Q643.13 227.03 641.99 227.48Q640.85 227.93 640.33 228.68Q639.8 229.43 639.8 230.36Q639.8 231.47 640.5 232.13Q641.21 232.79 642.34 233.18Q643.46 233.57 644.81 233.89Q646.16 234.2 647.52 234.59Q648.89 234.98 650.01 235.61Q651.14 236.24 651.83 237.29Q652.52 238.34 652.52 239.99Q652.52 241.58 651.65 242.95Q650.78 244.31 648.97 245.14Q647.15 245.96 644.39 245.96ZM681.29 245.96Q678.89 245.96 676.87 245.17Q674.84 244.37 673.36 242.92Q671.87 241.46 671.03 239.51Q670.19 237.56 670.19 235.22Q670.19 232.88 671.03 230.93Q671.87 228.98 673.37 227.53Q674.87 226.07 676.89 225.28Q678.92 224.48 681.32 224.48Q683.75 224.48 685.8 225.31Q687.86 226.13 689.3 227.75L687.35 229.64Q686.15 228.38 684.65 227.77Q683.15 227.15 681.44 227.15Q679.67 227.15 678.15 227.75Q676.64 228.35 675.53 229.43Q674.42 230.51 673.8 232Q673.19 233.48 673.19 235.22Q673.19 236.96 673.8 238.45Q674.42 239.93 675.53 241.01Q676.64 242.09 678.15 242.69Q679.67 243.29 681.44 243.29Q683.15 243.29 684.65 242.68Q686.15 242.06 687.35 240.77L689.3 242.66Q687.86 244.28 685.8 245.12Q683.75 245.96 681.29 245.96ZM723.35 245.72L723.35 224.72L726.35 224.72L726.35 245.72ZM708.29 245.72L708.29 224.72L711.29 224.72L711.29 245.72ZM710.99 236.36L710.99 233.75L723.62 233.75L723.62 236.36ZM757.13 245.96Q754.73 245.96 752.67 245.15Q750.62 244.34 749.12 242.89Q747.62 241.43 746.78 239.48Q745.94 237.53 745.94 235.22Q745.94 232.91 746.78 230.96Q747.62 229.01 749.12 227.56Q750.62 226.1 752.66 225.29Q754.7 224.48 757.13 224.48Q759.53 224.48 761.55 225.28Q763.58 226.07 765.1 227.53Q766.61 228.98 767.43 230.93Q768.26 232.88 768.26 235.22Q768.26 237.56 767.43 239.51Q766.61 241.46 765.1 242.92Q763.58 244.37 761.55 245.17Q759.53 245.96 757.13 245.96ZM757.13 243.29Q758.87 243.29 760.36 242.69Q761.84 242.09 762.93 241Q764.03 239.9 764.64 238.43Q765.26 236.96 765.26 235.22Q765.26 233.48 764.64 232.01Q764.03 230.54 762.93 229.45Q761.84 228.35 760.36 227.75Q758.87 227.15 757.13 227.15Q755.36 227.15 753.88 227.75Q752.39 228.35 751.28 229.45Q750.17 230.54 749.55 232.01Q748.94 233.48 748.94 235.22Q748.94 236.96 749.55 238.43Q750.17 239.9 751.28 241Q752.39 242.09 753.88 242.69Q755.36 243.29 757.13 243.29ZM797.33 245.96Q794.93 245.96 792.88 245.15Q790.82 244.34 789.32 242.89Q787.82 241.43 786.98 239.48Q786.14 237.53 786.14 235.22Q786.14 232.91 786.98 230.96Q787.82 229.01 789.32 227.56Q790.82 226.1 792.86 225.29Q794.9 224.48 797.33 224.48Q799.73 224.48 801.75 225.28Q803.78 226.07 805.3 227.53Q806.81 228.98 807.63 230.93Q808.46 232.88 808.46 235.22Q808.46 237.56 807.63 239.51Q806.81 241.46 805.3 242.92Q803.78 244.37 801.75 245.17Q799.73 245.96 797.33 245.96ZM797.33 243.29Q799.07 243.29 800.56 242.69Q802.04 242.09 803.13 241Q804.23 239.9 804.85 238.43Q805.46 236.96 805.46 235.22Q805.46 233.48 804.85 232.01Q804.23 230.54 803.13 229.45Q802.04 228.35 800.56 227.75Q799.07 227.15 797.33 227.15Q795.56 227.15 794.08 227.75Q792.59 228.35 791.48 229.45Q790.37 230.54 789.75 232.01Q789.14 233.48 789.14 235.22Q789.14 236.96 789.75 238.43Q790.37 239.9 791.48 241Q792.59 242.09 794.08 242.69Q795.56 243.29 797.33 243.29ZM828.05 245.72L828.05 224.72L831.05 224.72L831.05 243.11L842.42 243.11L842.42 245.72Z"/>
+</svg></a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="#directions">Направления</a>
+      <a href="#about">О нас</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+      <a class="btn btn-primary" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E." target="_blank" rel="noopener">Бесплатная консультация</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Меню
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <div class="wrap">
+      <div class="group-label">Направления</div>
+      <a href="#abroad">Учёба за рубежом <span>Improve Abroad</span></a>
+      <a href="#languages">Языки <span>Improve Languages</span></a>
+      <a href="#professional">Магистратура и MBA <span>Improve Professional</span></a>
+      <a href="#skills">Навыки, soft skills <span>Improve Skills</span></a>
+      <a href="#corporate">Для компаний <span>Improve Corporate</span></a>
+      <div class="group-label">Ещё</div>
+      <a href="#about">О нас</a>
+      <a href="#faq">Частые вопросы</a>
+      <a href="#contacts">Контакты</a>
+      <a class="btn btn-primary" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E." target="_blank" rel="noopener">Бесплатная консультация</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Improve School · с 2021 года</div>
+      <h1>Образование под вашу цель</h1>
+      <p class="lead">Поступление в университет, свободный иностранный язык, магистратура и MBA, обучение команды. Вы ставите цель, мы составляем план и ведём вас до результата.</p>
+      <p class="who">Работаем со школьниками и их родителями, студентами, специалистами и компаниями.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg>Бесплатная консультация</a>
+        <a class="btn btn-ghost" href="#directions">Смотреть направления</a>
+      </div>
+    </div>
+    <div class="path">
+      <h2>Путь нашего студента</h2>
+      <p class="sub">Сопровождаем студента на каждом этапе.</p>
+      <ol class="stairs">
+        <li style="--i:0"><span class="step">1</span><span class="label">Язык</span></li>
+        <li style="--i:1"><span class="step">2</span><span class="label">Экзамены</span></li>
+        <li style="--i:2"><span class="step">3</span><span class="label">Поступление</span></li>
+        <li style="--i:3"><span class="step">4</span><span class="label">Виза и переезд</span></li>
+        <li style="--i:4"><span class="step">5</span><span class="label">Учёба и стажировки</span></li>
+        <li style="--i:5"><span class="step">6</span><span class="label">Трудоустройство</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="directions" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Направления</div>
+      <h2>Пять направлений</h2>
+      <p class="lead">Выберите своё.</p>
+    </div>
+    <div class="dirs">
+      <a class="dir" href="#abroad"><span class="num">01 · Improve Abroad</span><h3>Учёба за рубежом</h3><span class="for">Школьники, выпускники, студенты</span><p>Подготовка и поступление в зарубежные университеты, в том числе к нашим партнёрам в Европе и Китае.</p><span class="more">Подробнее →</span></a>
+      <a class="dir" href="#languages"><span class="num">02 · Improve Languages</span><h3>Языки</h3><span class="for">Школьники и взрослые</span><p>Семь языков, от начального уровня до академического и делового.</p><span class="more">Подробнее →</span></a>
+      <a class="dir" href="#professional"><span class="num">03 · Improve Professional</span><h3>Магистратура и MBA</h3><span class="for">Специалисты и руководители</span><p>Магистратура, MBA, международные сертификаты, карьерный рост.</p><span class="more">Подробнее →</span></a>
+      <a class="dir" href="#skills"><span class="num">04 · Improve Skills</span><h3>Навыки, soft skills</h3><span class="for">Школьники, взрослые, компании</span><p>Soft skills для поступления, карьеры и работы в команде.</p><span class="more">Подробнее →</span></a>
+      <a class="dir" href="#corporate"><span class="num">05 · Improve Corporate</span><h3>Для компаний</h3><span class="for">Компании</span><p>Обучение сотрудников и руководителей, тренинги, повышение квалификации.</p><span class="more">Подробнее →</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="text">
+        <div class="eyebrow">О компании</div>
+        <h2>Пять лет помогаем учиться и расти</h2>
+        <p>С 2021 года мы помогаем школьникам, студентам и специалистам поступать в зарубежные университеты, учить языки и развивать карьеру.</p>
+        <p>Работаем по полному циклу: язык и экзамены, документы, виза, переезд, стажировки и трудоустройство. Компаниям помогаем с обучением сотрудников и руководителей.</p>
+        <p>За пять лет сложилась своя сеть партнёров: университеты и бизнес-школы в Европе и Китае. Мы хорошо знаем, что они требуют, и готовим студентов именно под эти условия.</p>
+        <p>В команде преподаватели, специалисты по международному образованию и карьерные консультанты. У каждого клиента есть свой куратор, который ведёт его от первой встречи до результата.</p>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:20px">Почему нам доверяют</div>
+        <div class="trust">
+          <div><strong>Персональный куратор</strong><span>Один человек ведёт вас и знает ваши цели.</span></div>
+          <div><strong>Прямая работа с университетами</strong><span>Сотрудничаем с вузами и бизнес-школами Европы и Китая, поэтому знаем их требования изнутри.</span></div>
+          <div><strong>Весь путь в одних руках</strong><span>Язык, экзамены, документы, виза, переезд, стажировки и карьера.</span></div>
+          <div><strong>Прозрачные условия</strong><span>Официальный договор, фиксированная стоимость услуг и отчёт на каждом этапе.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="parents">
+      <div><div class="eyebrow">Для родителей</div></div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <h3>Вы всегда знаете, как идёт подготовка</h3>
+        <p>Куратор присылает отчёты, график расписан заранее, а перед важными решениями мы встречаемся с родителями. Вы видите, как продвигается ребёнок и что будет дальше.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="abroad" class="alt">
+  <div class="wrap">
+    <div class="dhead">
+      <div>
+        <div class="eyebrow">01 · Improve Abroad</div>
+        <h2>Поступление за рубеж</h2>
+        <p class="lead">От выбора программы до переезда. Сотрудничаем с университетами Европы и Азии, знаем их требования и помогаем поступить.</p>
+      </div>
+      <span class="tag">Школьники, выпускники, студенты</span>
+    </div>
+
+    <h3 style="margin-bottom:6px">Университеты, которые мы рекомендуем</h3>
+    <p style="color:var(--muted);margin-bottom:22px">Наши партнёры в Германии, Австрии, Франции и Китае.</p>
+
+    <div class="unis">
+      <article class="uni">
+        <span class="country">Германия</span>
+        <h3>Hochschule Fresenius</h3>
+        <p>Один из старейших частных университетов Германии, основан в 1848 году, имеет государственное признание. Кампусы в Берлине, Кёльне, Мюнхене, Гамбурге, Дюссельдорфе, Гейдельберге, Висбадене и Идштайне.</p>
+        <ul>
+          <li><b>Бакалавриат</b>, 3–3,5 года: бизнес, IT, инженерия, биомедицина, психология, дизайн одежды, устойчивое развитие.</li>
+          <li><b>Магистратура</b>, 1–2 года: международный бизнес, MBA, компьютерные науки, биомедицина, фармацевтическая биотехнология, менеджмент люкса и другие программы.</li>
+          <li><b>Studienkolleg</b> в Кёльне: подготовительный год перед бакалавриатом.</li>
+        </ul>
+      </article>
+      <article class="uni">
+        <span class="country">Австрия, Вена</span>
+        <h3>University of Sustainability</h3>
+        <p>Charlotte Fresenius Privatuniversität. Частный университет группы Fresenius, аккредитован государством Австрии. Эксклюзивный партнёр Arizona State University в Австрии. Кампус в Вене, обучение на английском, небольшие группы.</p>
+        <ul>
+          <li><b>Бакалавриат</b>, 3 года: психология здоровья, клиническая и организационная психология.</li>
+          <li><b>Магистратура</b>, 2 года: менеджмент и устойчивый бизнес, есть обмен в США или Германии.</li>
+          <li>Учёба начинается в октябре. Студенты могут работать до 20 часов в неделю, а после выпуска остаться в Австрии и искать работу.</li>
+        </ul>
+      </article>
+      <article class="uni">
+        <span class="country">Франция</span>
+        <h3>Burgundy School of Business</h3>
+        <p>Бизнес-школа с историей более 120 лет. Тройная международная аккредитация (её имеют меньше 1% бизнес-школ мира), топ-100 рейтинга Financial Times. Кампусы в Дижоне и Лионе, студенты из 80+ стран, у каждого свой карьерный коуч.</p>
+        <ul>
+          <li><b>Бакалавриат</b>, 3 года, на английском или французском: менеджмент с выбором специализации, семестр за рубежом, стажировки, можно получить двойной диплом.</li>
+          <li><b>Магистратура</b>, 12 или 18 месяцев, на английском: искусственный интеллект, Data Science, финансы, менеджмент люкса, международный бизнес, маркетинг, культурный менеджмент, винный бизнес. Также Master in Management и MBA.</li>
+          <li>85% выпускников находят первую работу в течение четырёх месяцев.</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="china">
+      <div class="china-head">
+        <h3>Университеты Китая</h3>
+        <span class="tag">Языковой год · Бакалавриат</span>
+      </div>
+      <p>Помогаем выбрать университет, собрать документы и поступить.</p>
+      <ul>
+        <li><span>Beijing Language and Culture University</span><span>Пекин, Хайнань</span></li>
+        <li><span>Beijing Forestry University</span><span>Пекин</span></li>
+        <li><span>Beijing Information Science and Technology University</span><span>Пекин</span></li>
+        <li><span>Hefei University of Technology</span><span>Хэфэй</span></li>
+        <li><span>Huaibei Normal University</span><span>Хуайбэй</span></li>
+        <li><span>Xijing University</span><span>Сиань</span></li>
+        <li><span>Hebei Vocational University of Industry and Technology</span><span>Шицзячжуан</span></li>
+        <li><span>Hunan Industry Polytechnic</span><span>Чанша</span></li>
+        <li><span>Guizhou Nursing Vocational College<small>только для девушек</small></span><span>Гуйян</span></li>
+      </ul>
+    </div>
+
+    <div class="extra">
+      <div><h3>Магистратура и MBA</h3><p>Для тех, у кого уже есть высшее образование. Помогаем с выбором программы, документами, языком, собеседованием, визой и переездом, в том числе к нашим партнёрам. Подробнее в разделе <a href="#professional">Improve Professional</a>.</p></div>
+      <div><h3>Другие университеты</h3><p>Помогаем поступить и в другие вузы Европы, Азии и мира. Варианты подберём на консультации.</p></div>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3>Что входит</h3>
+        <ul class="checks">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Подбор университета и программы</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Подготовка по языку и к вступительным экзаменам, включая SAT, GMAT и GRE</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Полный пакет документов</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Подбор грантов и стипендий, подготовка заявок</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Виза и подготовка к собеседованию в посольстве</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Организация переезда</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Заявки на стажировки</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Помощь с трудоустройством вместе с Pro Union</li>
+        </ul>
+      </div>
+      <div class="steps">
+        <h3>Как мы работаем</h3>
+        <ol>
+          <li>Разбираем цели, уровень и бюджет</li>
+          <li>Выбираем университет и программу</li>
+          <li>Заключаем договор</li>
+          <li>Готовимся: язык, экзамены, документы</li>
+          <li>Подаём документы и поступаем</li>
+          <li>Оформляем визу и организуем отъезд</li>
+        </ol>
+        <a class="btn btn-gold" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%20%D0%B7%D0%B0%20%D1%80%D1%83%D0%B1%D0%B5%D0%B6%D0%BE%D0%BC." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg>Подобрать университет</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="languages">
+  <div class="wrap">
+    <div class="dhead">
+      <div>
+        <div class="eyebrow">02 · Improve Languages</div>
+        <h2>Язык для учёбы, работы и жизни</h2>
+      </div>
+      <span class="tag">Школьники и взрослые</span>
+    </div>
+    <div class="card">
+      <div class="side">
+        <div class="chips"><span>Английский</span><span>Немецкий</span><span>Французский</span><span>Испанский</span><span>Китайский</span><span>Арабский</span><span>Турецкий</span></div>
+        <p>Индивидуально или в группах до шести человек, в офисе и онлайн.</p>
+        <p>Сначала проверяем уровень и обсуждаем вашу цель. Потом составляем план и каждые 4–6 недель смотрим прогресс. Студент или родители получают короткий отчёт.</p>
+        <div><a class="btn btn-primary" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B9%20%D1%83%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg>Узнать свой уровень</a></div>
+      </div>
+      <ul class="checks" style="margin:0">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg><span><b>Общий язык:</b> от нуля до свободного общения</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg><span><b>Академический язык:</b> лекции, эссе, презентации</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg><span><b>Экзамены:</b> IELTS, TOEFL, Duolingo English Test, DELE, DELF/DALF, TestDaF</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg><span><b>Деловой язык:</b> переговоры, переписка, презентации</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="professional" class="alt">
+  <div class="wrap">
+    <div class="dhead">
+      <div>
+        <div class="eyebrow">03 · Improve Professional</div>
+        <h2>Следующий шаг в карьере</h2>
+        <p class="lead">Магистратура и MBA за рубежом для специалистов и руководителей.</p>
+      </div>
+      <span class="tag">Специалисты и руководители</span>
+    </div>
+    <div class="card">
+      <ul class="checks" style="margin:0">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Подбор магистратуры и MBA под ваш опыт, цели и бюджет, в том числе в университетах-партнёрах</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Мотивационное письмо, рекомендации, подготовка к собеседованию</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Подготовка к GMAT и GRE</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Подбор грантов и стипендий, подготовка заявок</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Короткие программы бизнес-школ для руководителей</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Международные профессиональные сертификаты</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Деловой английский под ваши рабочие задачи</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Помощь с трудоустройством вместе с Pro Union</li>
+      </ul>
+      <div class="side">
+        <p>Работаем с теми, у кого уже есть опыт работы. Помогаем выбрать программу, которая подходит под вашу карьеру, и сопровождаем до зачисления.</p>
+        <div><a class="btn btn-primary" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B0%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D1%83%D1%80%D1%83%20%D0%B8%D0%BB%D0%B8%20MBA." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg>Подобрать магистратуру или MBA</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="dhead">
+      <div>
+        <div class="eyebrow">04 · Improve Skills</div>
+        <h2>Soft skills</h2>
+        <p class="lead">Навыки, которые помогают поступить, пройти собеседование и расти на работе.</p>
+      </div>
+      <span class="tag">Школьники, взрослые, компании</span>
+    </div>
+    <div class="card">
+      <ul class="checks" style="margin:0">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Публичные выступления и презентации</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Деловая коммуникация и переговоры</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Самопрезентация и подготовка к собеседованиям</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Критическое мышление и аргументация</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Лидерство и работа в команде</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Тайм-менеджмент</li>
+      </ul>
+      <div class="side">
+        <p>Индивидуально, в мини-группах и тренингами для компаний. В офисе и онлайн.</p>
+        <div><a class="btn btn-primary" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%D1%8B%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%82%D1%80%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%20%D0%BF%D0%BE%20soft%20skills." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg>Выбрать тренинг</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="corporate" class="alt">
+  <div class="wrap">
+    <div class="dhead">
+      <div>
+        <div class="eyebrow">05 · Improve Corporate</div>
+        <h2>Обучение для вашей команды</h2>
+        <p class="lead">Программы под задачи компании.</p>
+      </div>
+      <span class="tag">Компании</span>
+    </div>
+    <div class="card">
+      <ul class="checks" style="margin:0">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Корпоративный английский в офисе и онлайн</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Тренинги soft skills для сотрудников и руководителей</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Повышение квалификации сотрудников</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Программы развития руководителей</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Оценка уровня языка и навыков команды с отчётом для руководства</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6"/></svg>Подбор специалистов с международным образованием</li>
+      </ul>
+      <div class="side">
+        <h3>Как мы работаем</h3>
+        <div class="flow"><span>Встреча с руководством</span><i>→</i><span>Оценка команды</span><i>→</i><span>Программа и смета</span><i>→</i><span>Обучение</span><i>→</i><span>Итоговый отчёт</span></div>
+        <div><a class="btn btn-primary" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%82%D0%B8%D0%BC%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D0%BE%20%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8E%20%D0%B4%D0%BB%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg>Получить предложение для компании</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Частые вопросы</div>
+      <h2>Отвечаем заранее</h2>
+    </div>
+    <div class="faq">
+      <details><summary>С чего начать?</summary><p>С бесплатной консультации. Разберём ваши цели и уровень, предложим направление и план.</p></details>
+      <details><summary>С какого возраста готовиться к поступлению?</summary><p>Язык лучше начинать учить в 12–14 лет. К экзаменам и документам готовиться за полтора-два года до поступления, в зависимости от уровня языка.</p></details>
+      <details><summary>Какой уровень языка нужен на старте?</summary><p>Любой. Начинаем с вашего уровня и строим план под ваши сроки.</p></details>
+      <details><summary>Какие экзамены нужно сдавать?</summary><p>Зависит от университета и программы. На консультации составим точный список и план подготовки.</p></details>
+      <details><summary>В какие университеты можно поступить?</summary><p>Готовим к поступлению в любой зарубежный университет. Особенно рекомендуем университеты группы Fresenius в Германии и Австрии, Burgundy School of Business во Франции и наших партнёров в Китае.</p></details>
+      <details><summary>Гарантируете ли вы поступление?</summary><p>Решение о зачислении принимает университет. Мы делаем всё, чтобы заявка была сильной: готовим к экзаменам, проверяем документы и вместе выбираем программы.</p></details>
+      <details><summary>Как поступить в Германию после школы?</summary><p>Чаще всего нужен подготовительный год, Studienkolleg. Мы к нему готовим. На консультации посмотрим ваш аттестат.</p></details>
+      <details><summary>Помогаете со стажировками?</summary><p>Да. Готовим заявки в международные компании, ООН, ОБСЕ и другие международные организации.</p></details>
+      <details><summary>Помогаете с трудоустройством?</summary><p>Да, вместе с консалтинговой компанией по человеческому капиталу Pro Union и другими партнёрами.</p></details>
+      <details><summary>Сколько стоят ваши услуги?</summary><p>Зависит от направления и объёма работы. Стоимость называем после консультации и фиксируем в договоре. За обучение в университете вы платите напрямую вузу.</p></details>
+      <details><summary>Как проходит оплата?</summary><p>По этапам. Языковые курсы оплачиваются помесячно.</p></details>
+      <details><summary>Можно встретиться лично?</summary><p>Да, в офисе по предварительной записи.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="contacts">
+  <div class="wrap contact-grid">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="eyebrow" style="color:var(--gold)">Контакты</div>
+      <h2>Расскажите о своей цели</h2>
+      <p class="lead">Мы предложим подходящее направление и составим план. Консультации проводим в офисе и онлайн.</p>
+      <div class="btns" style="margin-top:8px"><a class="btn btn-gold" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg>Бесплатная консультация</a></div>
+    </div>
+    <div class="clist">
+      <div class="citem"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><div class="label">Адрес</div><div class="value">Кыргызстан, г. Бишкек, ул. Аалы Токомбаева, 21/5</div></div></div>
+      <div class="citem"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><div class="label">Телефон / WhatsApp</div><a class="value" href="tel:+996888222333">0888 222 333</a></div></div>
+      <div class="citem"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A572" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></span><div><div class="label">Электронная почта</div><a class="value" href="mailto:info@improve.kg">info@improve.kg</a></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 874.04 277.58" aria-hidden="true" focusable="false">
+
+<path fill="#F7F4EC" d="M31.62 189.72L31.62 157.51L66.75 157.51L66.75 125.31L101.89 125.31L101.89 84.32L137.02 84.32L137.02 189.72Z"/>
+<path fill="#C5A572" d="M137.02 49.19C137.02 39.48 129.16 31.62 119.45 31.62C109.75 31.62 101.89 39.48 101.89 49.19C101.89 58.89 109.75 66.75 119.45 66.75C129.16 66.75 137.02 58.89 137.02 49.19Z"/>
+<path fill="#F7F4EC" d="M155.42 189.72L155.42 84.32L170.42 84.32L170.42 112.72L168.02 107.12Q172.82 95.92 183.42 89.62Q194.02 83.32 208.42 83.32Q223.62 83.32 234.52 91.02Q245.42 98.72 248.62 113.92L242.42 111.52Q247.02 98.92 258.82 91.12Q270.62 83.32 287.02 83.32Q299.82 83.32 309.42 88.32Q319.02 93.32 324.32 103.32Q329.62 113.32 329.62 128.72L329.62 189.72L314.02 189.72L314.02 130.32Q314.02 114.12 306.32 105.82Q298.62 97.52 284.62 97.52Q274.22 97.52 266.52 101.92Q258.82 106.32 254.62 114.52Q250.42 122.72 250.42 134.72L250.42 189.72L234.62 189.72L234.62 130.32Q234.62 114.12 226.92 105.82Q219.22 97.52 205.22 97.52Q195.02 97.52 187.22 101.92Q179.42 106.32 175.22 114.52Q171.02 122.72 171.02 134.72L171.02 189.72ZM408.22 190.72Q394.62 190.72 383.62 184.52Q372.62 178.32 366.12 166.32Q359.62 154.32 359.62 137.12Q359.62 119.52 366.02 107.62Q372.42 95.72 383.42 89.52Q394.42 83.32 408.22 83.32Q423.42 83.32 435.32 90.12Q447.22 96.92 454.12 109.02Q461.02 121.12 461.02 137.12Q461.02 153.12 454.12 165.12Q447.22 177.12 435.32 183.92Q423.42 190.72 408.22 190.72ZM353.42 228.52L353.42 84.32L368.42 84.32L368.42 115.12L367.02 137.32L369.02 159.52L369.02 228.52ZM407.02 176.92Q417.82 176.92 426.42 172.02Q435.02 167.12 440.02 158.02Q445.02 148.92 445.02 137.12Q445.02 125.12 440.02 116.12Q435.02 107.12 426.42 102.12Q417.82 97.12 407.02 97.12Q396.02 97.12 387.42 102.12Q378.82 107.12 373.82 116.12Q368.82 125.12 368.82 137.12Q368.82 148.92 373.82 158.02Q378.82 167.12 387.42 172.02Q396.02 176.92 407.02 176.92ZM475.22 189.72L475.22 84.32L490.22 84.32L490.22 113.12L488.62 107.52Q493.22 95.72 503.52 89.52Q513.82 83.32 529.22 83.32L529.22 98.72Q528.22 98.52 527.42 98.52Q526.62 98.52 525.62 98.52Q509.42 98.52 500.12 108.32Q490.82 118.12 490.82 136.32L490.82 189.72ZM585.62 190.72Q570.02 190.72 557.82 183.82Q545.62 176.92 538.62 164.72Q531.62 152.52 531.62 136.92Q531.62 121.12 538.72 109.12Q545.82 97.12 557.92 90.22Q570.02 83.32 585.62 83.32Q601.22 83.32 613.42 90.22Q625.62 97.12 632.62 109.12Q639.62 121.12 639.62 136.92Q639.62 152.52 632.62 164.72Q625.62 176.92 613.32 183.82Q601.02 190.72 585.62 190.72ZM585.62 176.92Q596.62 176.92 605.22 171.92Q613.82 166.92 618.72 157.92Q623.62 148.92 623.62 136.92Q623.62 124.92 618.72 116.02Q613.82 107.12 605.22 102.12Q596.62 97.12 585.62 97.12Q574.62 97.12 566.12 102.12Q557.62 107.12 552.52 116.02Q547.42 124.92 547.42 136.92Q547.42 148.92 552.52 157.92Q557.62 166.92 566.12 171.92Q574.62 176.92 585.62 176.92ZM681.22 189.72L634.62 84.32L651.02 84.32L693.42 181.32L685.62 181.32L728.42 84.32L744.02 84.32L697.22 189.72ZM794.82 190.72Q778.22 190.72 765.62 183.82Q753.02 176.92 746.02 164.72Q739.02 152.52 739.02 136.92Q739.02 121.32 745.72 109.22Q752.42 97.12 764.22 90.22Q776.02 83.32 791.02 83.32Q805.82 83.32 817.42 90.12Q829.02 96.92 835.72 109.02Q842.42 121.12 842.42 137.12Q842.42 138.12 842.32 139.42Q842.22 140.72 842.02 141.92L751.02 141.92L751.02 130.32L833.82 130.32L827.42 134.72Q827.62 123.72 822.82 115.12Q818.02 106.52 809.82 101.62Q801.62 96.72 791.02 96.72Q780.22 96.72 771.92 101.62Q763.62 106.52 759.02 115.22Q754.42 123.92 754.42 135.12L754.42 137.72Q754.42 149.32 759.52 158.12Q764.62 166.92 773.92 171.92Q783.22 176.92 795.22 176.92Q804.82 176.92 812.92 173.52Q821.02 170.12 826.82 163.32L835.62 173.52Q828.62 181.92 818.12 186.32Q807.62 190.72 794.82 190.72Z"/>
+<path fill="#C5A572" d="M644.39 245.96Q641.99 245.96 639.8 245.23Q637.61 244.49 636.35 243.32L637.46 240.98Q638.66 242.03 640.52 242.72Q642.38 243.41 644.39 243.41Q646.22 243.41 647.36 242.99Q648.5 242.57 649.04 241.84Q649.58 241.1 649.58 240.17Q649.58 239.09 648.88 238.43Q648.17 237.77 647.04 237.37Q645.92 236.96 644.57 236.66Q643.22 236.36 641.86 235.96Q640.49 235.55 639.37 234.92Q638.24 234.29 637.55 233.23Q636.86 232.16 636.86 230.48Q636.86 228.86 637.72 227.5Q638.57 226.13 640.36 225.31Q642.14 224.48 644.9 224.48Q646.73 224.48 648.53 224.96Q650.33 225.44 651.65 226.34L650.66 228.74Q649.31 227.84 647.81 227.44Q646.31 227.03 644.9 227.03Q643.13 227.03 641.99 227.48Q640.85 227.93 640.33 228.68Q639.8 229.43 639.8 230.36Q639.8 231.47 640.5 232.13Q641.21 232.79 642.34 233.18Q643.46 233.57 644.81 233.89Q646.16 234.2 647.52 234.59Q648.89 234.98 650.01 235.61Q651.14 236.24 651.83 237.29Q652.52 238.34 652.52 239.99Q652.52 241.58 651.65 242.95Q650.78 244.31 648.97 245.14Q647.15 245.96 644.39 245.96ZM681.29 245.96Q678.89 245.96 676.87 245.17Q674.84 244.37 673.36 242.92Q671.87 241.46 671.03 239.51Q670.19 237.56 670.19 235.22Q670.19 232.88 671.03 230.93Q671.87 228.98 673.37 227.53Q674.87 226.07 676.89 225.28Q678.92 224.48 681.32 224.48Q683.75 224.48 685.8 225.31Q687.86 226.13 689.3 227.75L687.35 229.64Q686.15 228.38 684.65 227.77Q683.15 227.15 681.44 227.15Q679.67 227.15 678.15 227.75Q676.64 228.35 675.53 229.43Q674.42 230.51 673.8 232Q673.19 233.48 673.19 235.22Q673.19 236.96 673.8 238.45Q674.42 239.93 675.53 241.01Q676.64 242.09 678.15 242.69Q679.67 243.29 681.44 243.29Q683.15 243.29 684.65 242.68Q686.15 242.06 687.35 240.77L689.3 242.66Q687.86 244.28 685.8 245.12Q683.75 245.96 681.29 245.96ZM723.35 245.72L723.35 224.72L726.35 224.72L726.35 245.72ZM708.29 245.72L708.29 224.72L711.29 224.72L711.29 245.72ZM710.99 236.36L710.99 233.75L723.62 233.75L723.62 236.36ZM757.13 245.96Q754.73 245.96 752.67 245.15Q750.62 244.34 749.12 242.89Q747.62 241.43 746.78 239.48Q745.94 237.53 745.94 235.22Q745.94 232.91 746.78 230.96Q747.62 229.01 749.12 227.56Q750.62 226.1 752.66 225.29Q754.7 224.48 757.13 224.48Q759.53 224.48 761.55 225.28Q763.58 226.07 765.1 227.53Q766.61 228.98 767.43 230.93Q768.26 232.88 768.26 235.22Q768.26 237.56 767.43 239.51Q766.61 241.46 765.1 242.92Q763.58 244.37 761.55 245.17Q759.53 245.96 757.13 245.96ZM757.13 243.29Q758.87 243.29 760.36 242.69Q761.84 242.09 762.93 241Q764.03 239.9 764.64 238.43Q765.26 236.96 765.26 235.22Q765.26 233.48 764.64 232.01Q764.03 230.54 762.93 229.45Q761.84 228.35 760.36 227.75Q758.87 227.15 757.13 227.15Q755.36 227.15 753.88 227.75Q752.39 228.35 751.28 229.45Q750.17 230.54 749.55 232.01Q748.94 233.48 748.94 235.22Q748.94 236.96 749.55 238.43Q750.17 239.9 751.28 241Q752.39 242.09 753.88 242.69Q755.36 243.29 757.13 243.29ZM797.33 245.96Q794.93 245.96 792.88 245.15Q790.82 244.34 789.32 242.89Q787.82 241.43 786.98 239.48Q786.14 237.53 786.14 235.22Q786.14 232.91 786.98 230.96Q787.82 229.01 789.32 227.56Q790.82 226.1 792.86 225.29Q794.9 224.48 797.33 224.48Q799.73 224.48 801.75 225.28Q803.78 226.07 805.3 227.53Q806.81 228.98 807.63 230.93Q808.46 232.88 808.46 235.22Q808.46 237.56 807.63 239.51Q806.81 241.46 805.3 242.92Q803.78 244.37 801.75 245.17Q799.73 245.96 797.33 245.96ZM797.33 243.29Q799.07 243.29 800.56 242.69Q802.04 242.09 803.13 241Q804.23 239.9 804.85 238.43Q805.46 236.96 805.46 235.22Q805.46 233.48 804.85 232.01Q804.23 230.54 803.13 229.45Q802.04 228.35 800.56 227.75Q799.07 227.15 797.33 227.15Q795.56 227.15 794.08 227.75Q792.59 228.35 791.48 229.45Q790.37 230.54 789.75 232.01Q789.14 233.48 789.14 235.22Q789.14 236.96 789.75 238.43Q790.37 239.9 791.48 241Q792.59 242.09 794.08 242.69Q795.56 243.29 797.33 243.29ZM828.05 245.72L828.05 224.72L831.05 224.72L831.05 243.11L842.42 243.11L842.42 245.72Z"/>
+</svg>
+    <span>ОУ ДПО «Импрув Скул» · Бишкек</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/996888222333?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E." target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 5l1.2-1.2 1.7.8-.4 1.6c-3.6.2-7.4-3.5-7.2-7.2l1.6-.4.8 1.7z"/></svg></a>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'), menu=document.getElementById('mobileMenu');
+  btn.addEventListener('click',function(){
+    var open=menu.hidden; menu.hidden=!open; btn.setAttribute('aria-expanded',String(open));
+  });
+  menu.addEventListener('click',function(e){
+    if(e.target.closest('a')){menu.hidden=true;btn.setAttribute('aria-expanded','false');}
+  });
+})();
+</script>
+
+</body>
+</html>
